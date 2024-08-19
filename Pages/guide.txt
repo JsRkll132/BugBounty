@@ -1,0 +1,14 @@
+#
+#subfinder -dL domains.txt -all -recursive -o subdomains.txt
+#cat subdomains | -wc -l 
+#httpx-toolkit
+#get subdomains 
+
+#cat subdomains.txt | httpx-toolkit -l subdomains.txt -ports 443,80,8080, 8000, 8888 -threads 200 > subdomains_alive.txt
+#naabu -list subdomains.txt -c 50-nmap-cli 'nmap -sV -SC' -o naabu-full.txt
+#dirsearch -l subdomains_alive.txt -x 500,502,429,404,400 -R 5 --random-agent -t 100 -F -o directories.txt -w DICT_PATH
+# cat subdomians_active.txt | gau > params.txt
+#cat params.txt | uro -o filterparam.txt 
+#cat filterparam.txt | grep *.js$* > jsfiles.txt
+#cat jsfiles.txt | uro | anew jsfiles.txt
+#cat jsfilex.txt | while read url; do python3 ../secretfinder.py -i $url -o cli >> secret.txt;done
